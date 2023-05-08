@@ -39,8 +39,7 @@
   cursor: pointer;
   transition: background-color 250ms linear, box-shadow 250ms linear;
 }
-.btn:hover,
-.btn:focus {
+.btn:hover {
   background-color: rgba(0, 0, 255, 0.7);
   box-shadow: 5px -5px 5px 0px rgba(8, 0, 252, 1);
   border: none;
