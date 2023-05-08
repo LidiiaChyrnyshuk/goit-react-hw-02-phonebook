@@ -34,7 +34,7 @@ export class App extends Component {
 
     this.handleAddNewContact(name, number);
 
-    this.handleResetForm();
+    // this.handleResetForm();
   };
 
   handleAddNewContact = (name, number) => {
