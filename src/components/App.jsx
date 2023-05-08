@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import css from './App.module.css';
 
-import { ContactEditor } from './ContactEditor/ContactEditor';
+import { ContactForm } from './ContactForm/ContactForm';
 import { ContactsFilter } from './ContactsFilter/ContactsFilter';
 import { ContactsList } from './ContactsList/ContactsList';
 
@@ -33,8 +33,6 @@ export class App extends Component {
     }
 
     this.handleAddNewContact(name, number);
-
-    // this.handleResetForm();
   };
 
   handleAddNewContact = (name, number) => {
@@ -47,10 +45,6 @@ export class App extends Component {
       return { contacts: [contact, ...prevState.contacts] };
     });
   };
-
-  // handleResetForm = () => {
-  //   this.setState({ ...this.state });
-  // };
 
   handleDeleteContact = contactId => {
     this.setState(prevState => ({
@@ -76,7 +70,7 @@ export class App extends Component {
     return (
       <div className={css.container}>
         <h1>Phonebook</h1>
-        <ContactEditor onSubmit={this.handleSubmit}></ContactEditor>
+        <ContactForm onSubmit={this.handleSubmit} />
 
         <h2>Contacts</h2>
         <ContactsFilter

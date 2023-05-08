@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import css from './ContactEditor.module.css';
+import css from './ContactForm.module.css';
 
-export class ContactEditor extends Component {
+export class ContactForm extends Component {
   state = {
     name: '',
     number: '',
@@ -15,7 +15,12 @@ export class ContactEditor extends Component {
   handleSubmit = evt => {
     evt.preventDefault();
     this.props.onSubmit({ ...this.state });
+    // this.handleResetForm();
   };
+
+  // handleResetForm = () => {
+  //   this.setState(...this.state);
+  // };
 
   render() {
     const { name, number } = this.state;
@@ -33,6 +38,7 @@ export class ContactEditor extends Component {
             type="text"
             name="name"
             value={name}
+            placeholder="Rosie Simpson"
             onChange={this.handleChange}
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
@@ -46,6 +52,7 @@ export class ContactEditor extends Component {
             type="tel"
             name="number"
             value={number}
+            placeholder="+380556688995"
             onChange={this.handleChange}
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"

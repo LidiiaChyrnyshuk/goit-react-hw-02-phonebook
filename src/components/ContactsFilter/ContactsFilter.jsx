@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from '../ContactEditor/ContactEditor.module.css';
+import css from '../ContactForm/ContactForm.module.css';
 
 export const ContactsFilter = ({ value, onChange }) => {
   return (
