@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: 30px;
   border: 2px solid black;
+  border-radius: 4px;
 }
 
 .label {
@@ -14,10 +15,11 @@
 }
 
 .input {
-  width: 300px;
+  width: 90%;
   height: 40px;
+  padding: 10px;
   font-size: 30px;
-  padding: 5px;
+  border-radius: 4px;
   outline-color: blue;
   transition: box-shadow 250ms linear;
 }

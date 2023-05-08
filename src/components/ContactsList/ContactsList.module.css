@@ -1,8 +1,11 @@
 .contactList {
   width: 750px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border: 2px solid black;
+  border-radius: 4px;
 }
 
 .item {

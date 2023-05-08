@@ -12,13 +12,18 @@ export class ContactEditor extends Component {
     this.setState({ [name]: value });
   };
 
+  handleSubmit = evt => {
+    evt.preventDefault();
+    this.props.onSubmit({ ...this.state });
+  };
+
   render() {
     const { name, number } = this.state;
 
     return (
       <form
         autoComplete="off"
-        onSubmit={this.props.formSubmit}
+        onSubmit={this.handleSubmit}
         className={css.form}
       >
         <label htmlFor="name" className={css.label}>

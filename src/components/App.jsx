@@ -48,9 +48,9 @@ export class App extends Component {
     });
   };
 
-  handleResetForm = () => {
-    this.setState({ ...this.state });
-  };
+  // handleResetForm = () => {
+  //   this.setState({ ...this.state });
+  // };
 
   handleDeleteContact = contactId => {
     this.setState(prevState => ({
@@ -76,7 +76,7 @@ export class App extends Component {
     return (
       <div className={css.container}>
         <h1>Phonebook</h1>
-        <ContactEditor formSubmit={this.handleSubmit}></ContactEditor>
+        <ContactEditor onSubmit={this.handleSubmit}></ContactEditor>
 
         <h2>Contacts</h2>
         <ContactsFilter
